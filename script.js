@@ -1,4 +1,5 @@
 const taskArray = [];
+
 const mainContent = document.getElementById("main-content");
 const button = document.querySelector("button")
 class Task {
@@ -36,8 +37,10 @@ newTask = () => {
   let date = document.getElementById("date").value;
   let status = "incomplete";
   const task = new Task (title, date, status);
-  addTaskToArray(task, date);
+  addTaskToArray(task);
   displayTask(task);
 }
 
 button.addEventListener('click', newTask);
+
+displayArray();
